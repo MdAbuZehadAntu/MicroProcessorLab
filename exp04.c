@@ -7,7 +7,7 @@ http://www.hpinfotech.com
 
 Project : 
 Version : 
-Date    : 3/17/2021
+Date    : 3/21/2021
 Author  : 
 Company : 
 Comments: 
@@ -29,7 +29,6 @@ Data Stack size         : 512
 void main(void)
 {
 // Declare your local variables here
-     int a=350;
 
 // Input/Output Ports initialization
 // Port A initialization
@@ -43,7 +42,6 @@ DDRA=0b11111111;
 // State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 
 DDRB=0b11111111;
-PORTB=0b11111110;
 
 // Port C initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
@@ -132,39 +130,18 @@ SPCR=0x00;
 TWCR=0x00;
 
 while (1)
-      {
-      PORTA=0b10000110;
-      delay_ms(a);     
+      {  
+      PORTB=0b11111110;
+      PORTA=0b00111111;
       
-      PORTA=0b11011011;
-      delay_ms(a);     
+      delay_ms(20);
+      PORTB=0b1 1111101;
+      PORTA=0b01101111; 
+      delay_ms(20); 
       
-      PORTA=0b11001111;
-      delay_ms(a); 
-        
-      PORTA=0b11100110;
-      delay_ms(a); 
-      
-      PORTA=0b11101101;
-      delay_ms(a); 
-      
-      PORTA=0b11111101;
-      delay_ms(a); 
-      
-      PORTA=0b10000111;
-      delay_ms(a);   
-      
-      PORTA=0b11111111;
-      delay_ms(a); 
-      
-      PORTA=0b11101111;
-      delay_ms(a);  
-      
-      PORTA=0b10111111;
-      delay_ms(a); 
-      
-      
-                      
+      PORTB=0b01111011;
+      PORTA=0b01011011; 
+      delay_ms(20);
       
 
       }

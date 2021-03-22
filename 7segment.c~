@@ -29,6 +29,7 @@ Data Stack size         : 512
 void main(void)
 {
 // Declare your local variables here
+     int a=350;
 
 // Input/Output Ports initialization
 // Port A initialization
@@ -133,32 +134,32 @@ TWCR=0x00;
 while (1)
       {
       PORTA=0b10000110;
-      delay_ms(1000);  
+      delay_ms(a);  
       PORTA=0b11011011;
-      delay_ms(1000); 
+      delay_ms(a);  
       PORTA=0b11001111;
-      delay_ms(1000);
+      delay_ms(a); 
         
       PORTA=0b11100110;
-      delay_ms(1000);
+      delay_ms(a); 
       
       PORTA=0b11101101;
-      delay_ms(1000);
+      delay_ms(a); 
       
       PORTA=0b11111101;
-      delay_ms(1000);
+      delay_ms(a); 
       
       PORTA=0b10000111;
-      delay_ms(1000);  
+      delay_ms(a);   
       
       PORTA=0b11111111;
-      delay_ms(1000);
+      delay_ms(a); 
       
       PORTA=0b11101111;
-      delay_ms(1000); 
+      delay_ms(a);  
       
       PORTA=0b10111111;
-      delay_ms(1000);
+      delay_ms(a); 
       
       
                       
