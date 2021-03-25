@@ -7,7 +7,7 @@ http://www.hpinfotech.com
 
 Project : 
 Version : 
-Date    : 3/21/2021
+Date    : 3/25/2021
 Author  : 
 Company : 
 Comments: 
@@ -22,26 +22,32 @@ Data Stack size         : 512
 *****************************************************/
 
 #include <mega32.h>
+
+// Alphanumeric LCD Module functions
+#include <alcd.h>
 #include <delay.h>
+#include <stdio.h>
 
 // Declare your global variables here
 
 void main(void)
 {
 // Declare your local variables here
+int i=0;
+
 
 // Input/Output Ports initialization
 // Port A initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
 // State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
+PORTA=0x00;
+DDRA=0x00;
 
-DDRA=0b11111111;
-DDRB=0b11111111;
 // Port B initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
 // State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
-
-
+PORTB=0x00;
+DDRB=0x00;
 
 // Port C initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
@@ -129,14 +135,37 @@ SPCR=0x00;
 // TWI disabled
 TWCR=0x00;
 
-while (1)
-      {  
-          PORTB=0b11111110;
-          PORTA=0b00000110;
-          //delay_ms(20) ; 
-          PORTB=0b11111101;
-          PORTA=0b01100110;
-          //delay_ms(20)  ;
+// Alphanumeric LCD initialization
+// Connections specified in the
+// Project|Configure|C Compiler|Libraries|Alphanumeric LCD menu:
+// RS - PORTB Bit 0
+// RD - PORTB Bit 1
+// EN - PORTB Bit 2
+// D4 - PORTB Bit 4
+// D5 - PORTB Bit 5
+// D6 - PORTB Bit 6
+// D7 - PORTB Bit 7
+// Characters/line: 16
+lcd_init(16);
 
+
+
+while (1)
+      {
+          for(i=0;i<7;i++)
+          {
+            lcd_gotoxy(i,0);
+            lcd_puts("NewMarket");
+            delay_ms(300);
+            lcd_clear();            
+          }
+           for(i=0;i<7;i++)
+          {
+            lcd_gotoxy(7-i,0);
+            lcd_puts("NewMarket");
+            delay_ms(300);
+            lcd_clear();            
+          }
+          
       }
 }

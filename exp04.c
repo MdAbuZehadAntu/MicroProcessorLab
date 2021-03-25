@@ -36,12 +36,12 @@ void main(void)
 // State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 
 DDRA=0b11111111;
-
+DDRB=0b11111111;
 // Port B initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
 // State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 
-DDRB=0b11111111;
+
 
 // Port C initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
@@ -131,18 +131,12 @@ TWCR=0x00;
 
 while (1)
       {  
-      PORTB=0b11111110;
-      PORTA=0b00111111;
-      
-      delay_ms(20);
-      PORTB=0b1 1111101;
-      PORTA=0b01101111; 
-      delay_ms(20); 
-      
-      PORTB=0b01111011;
-      PORTA=0b01011011; 
-      delay_ms(20);
-      
+          PORTB=0b11111110;
+          PORTA=0b00000110;
+          delay_ms(20) ; 
+          PORTB=0b11111101;
+          PORTA=0b01100110;
+          delay_ms(20)  ;
 
       }
 }
