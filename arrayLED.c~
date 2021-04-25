@@ -158,7 +158,7 @@ while (1)
              PORTA=arr[ind];
              delay_ms(50);  
              PORTB=~0b00000010;
-             PORTA=arr[ind];
+             PORTA=arr[ind+1];
              delay_ms(50);
          }  
          ind++;

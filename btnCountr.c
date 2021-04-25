@@ -1,4 +1,4 @@
- /*****************************************************
+/*****************************************************
 This program was produced by the
 CodeWizardAVR V2.05.0 Professional
 Automatic Program Generator
@@ -22,34 +22,16 @@ Data Stack size         : 512
 *****************************************************/
 
 #include <mega32.h>
-#include <delay.h>
+#include<delay.h>
 
 // Declare your global variables here
 
 void main(void)
 {
 // Declare your local variables here
-int arr[10]={
- 0b00111111,
- 0b00000110,
- 0b00000111,
- 0b01111111
 
-
-
-
-
-
-
-
-
-
-
-
-
-}  ;
+int arr[8]={0b00000001,0b00000010, 0b00000100,0b00001000,0b00010000,0b00100000,0b01000000,0b10000000};
 int i=0;
-int ind=0;
 // Input/Output Ports initialization
 // Port A initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
@@ -61,7 +43,8 @@ DDRA=0b11111111;
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
 // State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 
-DDRB=0b11111111;
+DDRB=0x00;
+PORTB=0b00000000;
 
 // Port C initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
@@ -150,22 +133,21 @@ SPCR=0x00;
 TWCR=0x00;
 
 while (1)
-      {
-         for(i=0;i<7;i++)
-         {  
-             //delay_ms(100);
-             PORTB=~0b00000001;
-             PORTA=arr[ind];
-             delay_ms(50);  
-             PORTB=~0b00000010;
-             PORTA=arr[ind+1];
-             delay_ms(50);
-         }  
-         ind++;
-         if(ind==4)
-         {
-            ind=0;
-         }
-
+      {    PINB.0=1;
+           if(PINB.0==0)
+           {
+                if(i<8)
+                {
+      
+                    PORTA=  arr[i++];
+                    delay_ms(500);  
+                 }
+                 else
+                {
+                     i=0;
+                }
+           
+           }
+        
       }
 }

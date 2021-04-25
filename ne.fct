@@ -1,0 +1,4 @@
+main DSTACK_USAGE:36 DSTACK_LEVEL:36 FILE:"ne.c" LINE:32
+lcd_init DSTACK_USAGE:1 DSTACK_LEVEL:37 FILE:"C:\cvavreval\lib\alcd.lib" LINE:264
+_lcd_write_data DSTACK_USAGE:1 DSTACK_LEVEL:38 FILE:"C:\cvavreval\lib\alcd.lib" LINE:147
+_lcd_write_nibble DSTACK_USAGE:1 DSTACK_LEVEL:39 FILE:"C:\cvavreval\lib\alcd.lib" LINE:132

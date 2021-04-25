@@ -4,11 +4,11 @@ FormatVersion=2
 CV=2.05.0 Professional
 A=
 C=
-D=3/29/2021 4:05:18 PM
+D=4/7/2021 9:24:43 AM
 Files=1
-F1=PUSHBTNLAB.c
-OpenedFiles=1
-OF1=PUSHBTNLAB.c
+F1=7SEG.c
+OpenedFiles=2
+OF1=7SEG.c
 Active1=1
 OutputListFilesDirectory=List
 OutputObjectFilesDirectory=Obj
@@ -22,8 +22,13 @@ Active0=0
 EditorPanel0=0
 PageIndex0=0
 EditorPanel1=0
-TimeStamp1=1383957140
+TimeStamp1=1384599570
 PageIndex1=1
+OF2=7segment.c
+Active2=0
+EditorPanel2=0
+TimeStamp2=1383182422
+PageIndex2=2
 [Compiler]
 RebuildAll=0
 LinkageInformationPresent=1
@@ -115,7 +120,7 @@ WarningUnknownPragma=1
 LinkerWarnings=1
 DebugBootLoader=0
 WatchAVR8LAutoVariables=0
-Build=4
+Build=15
 UseEEPROMLocation0=1
 [Assembler]
 OutputFormat=1
@@ -193,7 +198,7 @@ ProgrammingCounter=0
 RunUserProg=0
 [HeadersList]
 Files=1
-F1=C:\Users\DELL\OneDrive\Documents\GitHub\MicroLab\PUSHBTNLAB.c
+F1=C:\Users\DELL\OneDrive\Documents\GitHub\MicroLab\7SEG.c
 [Header1]
 Files=3
 F1=C:\cvavreval\inc\mega32.h
@@ -204,16 +209,17 @@ Row=0
 Column=0
 ScrollPosX=0
 ScrollPosY=0
-TimeStamp=1383959719
+TimeStamp=1384600655
 [BookmarksFoldedCode]
-Files=1
-F1=PUSHBTNLAB.c
+Files=2
+F1=7SEG.c
+F2=7segment.c
 [Bookmarks1]
-TimeStamp=1383957140
-Row=142
-Column=25
+TimeStamp=1384599570
+Row=160
+Column=15
 ScrollPosX=0
-ScrollPosY=123
+ScrollPosY=131
 BK0=-1
 BK1=-1
 BK2=-1
@@ -225,4 +231,22 @@ BK7=-1
 BK8=-1
 BK9=-1
 [FoldedCode1]
+Blocks=0
+[Bookmarks2]
+TimeStamp=1383182422
+Row=162
+Column=12
+ScrollPosX=0
+ScrollPosY=129
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[FoldedCode2]
 Blocks=0
